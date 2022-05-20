@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 const shortid = require('shortid');
 
-const Schema = mongoose.Schema();
+const Schema = mongoose.Schema;
 
 const linkSchema = new Schema({
     fullLink:{
@@ -16,7 +16,7 @@ const linkSchema = new Schema({
     },
     opens:{
         type:Number,
-        required:true.valueOf,
+        required:true,
         default:0
     }
 });

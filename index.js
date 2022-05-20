@@ -16,9 +16,11 @@ mongoose.connection.once('open',()=>{
     console.log("Connected to mongoDB");
 });
 
-app.get('/',(req,res)=>{
+const shortenRoute = require('./routes/shortenRoute');
+const redirectRoute = require('./routes/redirectRoute');
 
-});
+app.use(shortenRoute);
+app.use(redirectRoute);
 
 app.listen(5000,()=>{
     console.log("Server running on port 5000");
